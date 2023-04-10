@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>todays blogs</h3>
+
+{% if all %}
+    <ul>
+    {% for question in all %}
+        <li><div>
+            <h2>{{ question.author }} </h2> <p><b>{{ question.title}}</b></p> <p>{{question.body}}</p>
+        </div></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}

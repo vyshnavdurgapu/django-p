@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    {% if message %}
+        <p><b>{{ message }} added succesfully!!!</b></p>
+    {% endif %}
+    {% for item in items %}
+    <div>
+        <h3><b>{{ item.Name }} </b> {{ item.get_type_display }}</h3>
+        <p>no.={{ item.quantity }} rateper1={{ item.rate }} totalamount={{ item.amount }}</p> 
+    </div>
+    {% endfor %}
+</body>
+</html>
